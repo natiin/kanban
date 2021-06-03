@@ -88,7 +88,7 @@ function Board(props) {
                   <Droppable droppableId={columnId} key={columnId}>
                     {(provided, snapshot) => {
                       return (
-                        <div {...provided.droppableProps} ref={provided.innerRef} style={{ minHeight: "50px", overflowY: "auto" }}>
+                        <div {...provided.droppableProps} ref={provided.innerRef} style={{ minHeight: "50px", overflowY: "auto", flexGrow: "1" }}>
                           {todos.map((todo, i) => {
                             return (
                               <Draggable key={todo.id} draggableId={todo.id} index={i}>
